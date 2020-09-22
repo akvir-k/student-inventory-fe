@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Philosopher&display=swap');
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
 <title>Bootstrap Simple Login Form with Blue Background</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
@@ -5,6 +6,7 @@
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> 
+
 
 
 body {
@@ -197,3 +199,61 @@ body {
 .dropdown:hover .dropdown-menu {
 	display: block;
   }
+
+.Header_otp{
+	
+	width: 100%;
+	height: 100vh;
+	background-color: #d1d8e0;
+}
+
+.row_otp{
+
+	padding-top: 150px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+#otp_header{
+	display: flex;
+	justify-content: center;
+	text-transform: uppercase;
+	font-family: 'Bangers', cursive;
+	letter-spacing: 3px;
+	color: #2d98da;
+	text-shadow: 2px 2px 5px black;  
+}
+#info_otp{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	text-transform: capitalize;
+	font-family: 'Philosopher', sans-serif;
+	font-weight: bolder;	
+	padding-top: 20px;
+}
+
+.otp-field{
+	display: flex;
+	flex-wrap: wrap;
+	width: 60px;
+	margin-left: 10px;
+	float: left;	
+	margin-bottom: 20px;
+}
+
+#check_otp{
+	text-transform: uppercase;
+}
+
+.Submit_button{
+	display: flex;
+	padding-left: 60px;
+}
+#userImage{
+	height: 250px;
+	width: 250px;
+	margin-left:50px;
+}

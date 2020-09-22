@@ -26,6 +26,7 @@ const Signup = ({ history }) => {
 
     const onsubmit = (event) => {
         event.preventDefault()
+       
     }
 
     const submit = () => {
@@ -44,7 +45,7 @@ const Signup = ({ history }) => {
                 })
 
             }
-            else if (result.data.code == "ER_DUP_ENTRY") {
+            else if (result.data.code === "ER_DUP_ENTRY") {
                 sweetalert({
                     text: "Account already created",
                     icon: "warning",
@@ -57,7 +58,7 @@ const Signup = ({ history }) => {
 
     }
 
-    console.log(name)
+ 
     return (
         <>
             <Nav />

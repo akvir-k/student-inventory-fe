@@ -9,9 +9,7 @@ const AdminHome = ()=>{
             <div className= "main_page">
                 <div>
                     <h1>
-                        <marquee>
-                            Welcome to Navgurukul student database
-                        </marquee>
+                       
                     </h1>
                 </div>
                 <div className="container">

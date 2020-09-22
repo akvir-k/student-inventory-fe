@@ -14,7 +14,8 @@ import history from '../src/utils/history';
 import upload from './component/User/Add_student_data'
 import AdminStudentData from './component/common/StudentData';
 import userData from './component/User/Student';
-
+import UpdateStudent from './component/User/Update';
+import OtpVerify from './component/OtpVerify/Otp';
 
 
 
@@ -37,6 +38,8 @@ const App=()=>{
                 <Route exact path='/upload' component={upload}/>
                 <Route exact path='/studentData' component={AdminStudentData}/>
                 <Route exact path='/userStudent' component={userData}/>
+                <Route exact path='/student/update' component={UpdateStudent}/>
+                <Route exact path='/student/otpverify' component={OtpVerify}/>
             </Switch>
         </Router>
     )

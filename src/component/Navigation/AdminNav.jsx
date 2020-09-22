@@ -8,18 +8,18 @@ const AdminNav = () => {
             <div className="container-fluid nav_bg">
                 <div className="row w-100">
                     <div className="col-12.1 w-100 mx-auto">
-                        <nav class="navbar navbar-expand-lg navbar-light admin_nav">
-                            <a class="navbar-brand" href="#">
-                                <img className="navbar-brand-img" src="/navgurukul.png" alt="picture of navgurukul" />
+                        <nav className="navbar navbar-expand-lg navbar-light admin_nav">
+                            <a className="navbar-brand" href="https://navgurukul.org/" >
+                                <img className="navbar-brand-img" src="/navgurukul.png" alt="Navgurukul Logo" />
                             </a>
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
+                            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span className="navbar-toggler-icon"></span>
                             </button>
 
-                            <div class="collapse navbar-collapse admin_nav_text" id="navbarSupportedContent">
-                                <ul class="navbar-nav ml-auto ">
-                                    <li class="nav-item active">
-                                        <NavLink class="nav-link" to="/admin_home">Home <span class="sr-only">(current)</span></NavLink>
+                            <div className="collapse navbar-collapse admin_nav_text" id="navbarSupportedContent">
+                                <ul className="navbar-nav ml-auto ">
+                                    <li className="nav-item active">
+                                        <NavLink className="nav-link" to="/admin_home">Home <span className="sr-only">(current)</span></NavLink>
                                     </li>
 
                                     <li className="nav-item">

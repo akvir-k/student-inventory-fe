@@ -46,7 +46,7 @@ const Admin_Signup = ({ history }) => {
                     history.push('/login')
                 })
             }
-            else if (result.data.code == "ER_DUP_ENTRY") {
+            else if (result.data.code === "ER_DUP_ENTRY") {
                 sweetalert({
                     text: " Account already created",
                     icon: "warning",

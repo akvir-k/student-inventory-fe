@@ -2,7 +2,6 @@ import React from 'react';
 import Axios from 'axios';
 import { useState } from 'react';
 import AdminNav from '../Navigation/AdminNav';
-import SingleBedIcon from '@material-ui/icons/SingleBed';
 import { useEffect } from 'react';
 import sweet from 'sweetalert';
 
@@ -37,7 +36,7 @@ const ShowBed = () => {
         })
         .then((resp) => {
             console.log(resp)
-            if (resp.data==1){
+            if (resp.data===1){
                 sweet({
                     text:"Deleted successfully"
                 })

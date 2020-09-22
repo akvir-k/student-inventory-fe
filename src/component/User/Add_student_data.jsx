@@ -3,11 +3,11 @@ import axios from 'axios';
 import sweetalert from 'sweetalert'
 import Nav from '../Navigation/UserNav';
 
-const Upload = () => {
+const Upload = ({history}) => {
 
 
     const [img, setimg] = useState()
-    const [name, setname] = useState()
+    // const [name, setname] = useState()
     const data = new FormData();
     data.append('file', img);
     data.append('upload_preset', 'Navgurukul_image')
@@ -23,7 +23,7 @@ const Upload = () => {
         await axios.post('http://localhost:4000/checkUpload', {
             token: getToken,
             key: getKey
-        }).then((result) => {
+        }).then( async(result) => {
             console.log(result)
             if (result.data.length > 0) {
                 sweetalert({
@@ -34,35 +34,41 @@ const Upload = () => {
             } 
             else {
 
-                const res =  fetch('https://api.cloudinary.com/v1_1/virusaman/image/upload', {
+                fetch('https://api.cloudinary.com/v1_1/virusaman/image/upload', {
                     method: 'POST',
                     body: data
                 })
-                const value =  res.json()
-                if (value) {
-
-                    axios.post('http://localhost:4000/upload', {
-                        data: value.secure_url,
-                        token: localStorage.getItem('token'),
-                        key: localStorage.getItem('key')
-                    })
-                        .then(res => {
-                            console.log(res)
-                            if (res.length > 0) {
-                                sweetalert({
-                                    text: " Image uploaded Successfully",
-                                    icon: "success",
-                                    button: "ok"
-                                })
-                            } else {
-                                sweetalert({
-                                    text: res.data.code || "Upload Image Failed",
-                                    icon: "failed",
-                                    button: "Try Again"
-                                })
-                            }
+                .then(res=>res.json())
+                .then( res=>{
+                    
+                    if (res) {
+                        axios.post('http://localhost:4000/upload', {
+                            data: res.secure_url,
+                            token: localStorage.getItem('token'),
+                            key: localStorage.getItem('key')
                         })
-                }
+                            .then(insert_resp => {
+                                console.log(insert_resp)
+                                if (insert_resp.data.length > 0) {
+                                    sweetalert({
+                                        text: " Image uploaded Successfully",
+                                        icon: "success",
+                                        button: "ok"
+                                    })
+                                } else {
+                                    sweetalert({
+                                        text: insert_resp.data.code || "Upload Image Failed",
+                                        icon: "failed",
+                                        button: "Try Again"
+                                    })
+                                }
+                            })
+                    }
+                })
+                .catch(err=>{
+                    console.log(err)
+                })
+                
 
 
 
@@ -83,7 +89,7 @@ const Upload = () => {
                         <h3>Upload Student Photo</h3>
                         <div className="form-group"><br />
                             <input type="file"
-                                accept='png'
+                                accept='png/jpeg'
                                 onChange={event => {
                                     const value = event.target.files[0]
                                     setimg(value)
@@ -91,8 +97,6 @@ const Upload = () => {
                                 }}
                                 name='image'
                             />
-
-
                         </div>
 
                         <div className="form-group"><br />

@@ -5,7 +5,7 @@ import swap from 'sweetalert';
 
 
 
-const Addbed = () => {
+const Addbed = ({history}) => {
 
     const [bedValue, setBedData] = useState({
         bed: "",

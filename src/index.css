@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Manjari:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kite+One&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
 /* 
 *{
     margin: 0px;
@@ -199,8 +202,6 @@ SwiperSlide
 }
 .main_bed   {
     width: 100%;
-    
-    /* margin-top: 10%; */
 }
 .bed_container{
     margin-top: 10%;
@@ -256,10 +257,92 @@ SwiperSlide
 
 @media(max-width:768px){
     .student_main{height:auto ;}
+    .Header_otp{height: auto;}
 }
 
 .student_main{
+    
     width: 100vw;
     height: 100vh;
+}
+.student_img{
+    display: flex;
+    margin: 100px;
+    overflow: hidden;
+    justify-content: left;
+}
+.pic_student{
 
+    width:400px;
+}
+.Student_card_container{
+    display: flex;
+}
+.student_container{
+    margin-top: 100px;
+    font-size: 20px;
+    text-transform: capitalize;
+    font-family: 'Permanent Marker', cursive;
+}
+label{
+    font-family: 'Kite One', sans-serif;
+    text-transform: capitalize;
+}
+.AddStudent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.update_main{
+    
+    width: 100vw;
+    height: 100vh;
+    background-color: #9E9E9E;
+  
+}
+
+.parent_heading{
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    text-transform: uppercase;
+    font-family: 'Bree Serif', serif;
+    word-spacing: 8px;
+    text-shadow: 2px 2px 5px #0984e3;
+}
+.update_data{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#password_change{
+    margin-left: 22%;
+    padding-bottom: 20px;
+    text-transform: capitalize;
+    font-family: 'Kite One', sans-serif;
+    text-shadow: 2px 2px 5px black;  
+}
+.input{
+    margin: 10px;
+}
+#update_image{
+    display: flex;
+    margin-top: 30px;
+    margin-left:22% ;
+    padding-bottom: 20px;
+    text-transform: capitalize;
+    font-family: 'Kite One', sans-serif;
+    text-shadow: 2px 2px 5px black;  
+    overflow: hidden;
+      
+}
+.input_img{
+    display: flex;
+    justify-content: center;
+    margin-right: 15%;
+    margin-top: 30px;
+    
 }

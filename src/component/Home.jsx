@@ -1,6 +1,6 @@
 import React from 'react'
 import Nav from './Navigation/Nav';
-import SwiperCore, { Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectFade, Lazy, Mousewheel,EffectCoverflow } from 'swiper';
+import SwiperCore, { Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectCoverflow } from 'swiper';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
@@ -58,10 +58,10 @@ const Home = () => {
                         autoplay={{ disableOnInteraction: true }}
                         
                     >
-                        <SwiperSlide><img className="swiper_img" src="group.jpeg" /></SwiperSlide>
+                        <SwiperSlide><img className="swiper_img" src="group.jpeg" alt="loading.." /></SwiperSlide>
 
-                        <SwiperSlide><img className="swiper_img" src="group.jpeg" /></SwiperSlide>
-                        <SwiperSlide><img className="swiper_img" src="group.jpeg" /></SwiperSlide>
+                        <SwiperSlide><img className="swiper_img" src="group.jpeg" alt="loading.." /></SwiperSlide>
+                        <SwiperSlide><img className="swiper_img" src="group.jpeg" alt="loading.." /></SwiperSlide>
                     </Swiper>
                     
                 </div>
@@ -83,13 +83,13 @@ const Home = () => {
                     <div className="page_child1">
                     <Swiper{...Effectcover}>
                         
-                        <SwiperSlide><img className="child_img" src="himanshu.jpeg" /></SwiperSlide>
-                        <SwiperSlide><img className="child_img" src="Deepak patel.jpeg" /></SwiperSlide>
-                        <SwiperSlide><img className="child_img" src="Deepak Sharma.jpeg" /></SwiperSlide>
-                        <SwiperSlide><img className="child_img" src="kaushal.jpeg" /></SwiperSlide>
-                        <SwiperSlide><img className="child_img" src="sonu.jpeg" /></SwiperSlide>
-                        <SwiperSlide><img className="child_img" src="Bijender.jpeg" /></SwiperSlide>
-                        <SwiperSlide><img className="child_img" src="Ankur.jpeg" /></SwiperSlide>
+                        <SwiperSlide><img className="child_img" alt ="..."src="himanshu.jpeg" /></SwiperSlide>
+                        <SwiperSlide><img className="child_img" alt ="..."src="Deepak patel.jpeg" /></SwiperSlide>
+                        <SwiperSlide><img className="child_img" alt ="..."src="Deepak Sharma.jpeg" /></SwiperSlide>
+                        <SwiperSlide><img className="child_img" alt ="..."src="kaushal.jpeg" /></SwiperSlide>
+                        <SwiperSlide><img className="child_img" alt ="..."src="sonu.jpeg" /></SwiperSlide>
+                        <SwiperSlide><img className="child_img" alt ="..."src="Bijender.jpeg" /></SwiperSlide>
+                        <SwiperSlide><img className="child_img" alt ="..."src="Ankur.jpeg" /></SwiperSlide>
                     </Swiper>
                     </div>
                 </div>

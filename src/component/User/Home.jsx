@@ -1,7 +1,7 @@
 import React from 'react';
 import UserNav from '../Navigation/UserNav';
 
-const UserHome = ()=>{
+const UserHome = ({history})=>{
 
     return (
         <>

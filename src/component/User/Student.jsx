@@ -5,11 +5,8 @@ import StudentNav from '../Navigation/UserNav'
 
 const StudentData = ({ history }) => {
 
-    const [Nav, SetNav] = useState()
-
-
     const [Sdata, Setdata] = useState([]);
-    useEffect(async () => {
+    useEffect(() => {
         let getToken = localStorage.getItem('token')
         let getKey = localStorage.getItem('key')
         function fetchData() {
@@ -41,16 +38,25 @@ const StudentData = ({ history }) => {
                             </div>
                             <div className="student_container">
                                 <p className="student_text">
-                                    <label> Student Name: </label>
-                                    {value.firstName}{value.lastName}
+                                    <label> Student Name: </label> {value.firstName} {value.lastName}
                                 </p>
                                 <p className="student_text">
-                                    <label> Student Name: </label>
-                                    {value.firstName}{value.lastName}
+                                    <label> Current Bed: </label> {value.Currunt_bed}
                                 </p>
                                 <p className="student_text">
-                                    <label> Student Name: </label>
-                                    {value.firstName}{value.lastName}
+                                    <label> Current Side: </label> {value.CurruntBedside}                                  
+                                </p>
+                                <p className="student_text">
+                                    <label> Current Room: </label> {value.Currunt_roomNo}                                   
+                                </p>
+                                <p className="student_text">
+                                    <label> Previous Bed: </label> {value.Previous_Bed}
+                                </p>
+                                <p className="student_text">
+                                    <label> Previous Side: </label> {value.PreviousSide}
+                                </p>
+                                <p className="student_text">
+                                    <label> Previous Room: </label> {value.Previous_roomNo}
                                 </p>
                             </div>
                         </div>

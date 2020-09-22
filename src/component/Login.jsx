@@ -41,7 +41,7 @@ const Login = ({ history }) => {
             })
                 .then((result) => {
                     console.log(result.data.length)
-                    if (result.data.key == "student") {
+                    if (result.data.key === "student") {
 
                         localStorage.setItem("token", result.data.token)
                         localStorage.setItem('key', result.data.key)
@@ -77,7 +77,7 @@ const Login = ({ history }) => {
             })
                 .then((result) => {
                     console.log(result)
-                    if (result.data.key == "admin") {
+                    if (result.data.key === "admin") {
 
                         localStorage.setItem("token", result.data.token)
                         localStorage.setItem('key', result.data.key)
@@ -120,7 +120,7 @@ const Login = ({ history }) => {
             <div className="main_div">
                 <div className="box">
                     <h1 className=" login_head">Student Login </h1>
-                    <img src="login_icon.jpeg"></img>
+                    <img src="login_icon.jpeg" alt="loginICon"></img>
                     <form onSubmit={onsubmit} >
                         <div className="inputBox">
 

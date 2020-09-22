@@ -7,15 +7,13 @@ import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Axios from 'axios';
 import Admin from '../Navigation/AdminNav';
-import StudentNav from '../Navigation/UserNav'
 
 
 const StudentData = ({ history }) => {
 
-    const [Nav, SetNav] = useState()
     const [Sdata, Setdata] = useState([]);
     useEffect(() => {
-        async function fetchData() {
+          async function fetchData() {
             await Axios.get('http://localhost:4000/getShuffuleData')
                 .then(result => {
                     Setdata(result.data)
@@ -23,16 +21,6 @@ const StudentData = ({ history }) => {
                 })
         }
         fetchData();
-
-        async function check() {
-            let key = await localStorage.getItem('key')
-            if (key == 'admin') {
-                SetNav(Admin)
-            } else {
-                SetNav(StudentNav)
-            }
-        }
-        check();
     }, []);
 
     const useStyles = makeStyles({
@@ -49,17 +37,18 @@ const StudentData = ({ history }) => {
             <Admin />
             {Sdata.map((value, index) => {
                 return (
-                    <div className="data_card">
+                    <div key={index}className="data_card">
 
                         <Card className={classes.root}>
                             <CardActionArea>
                                 <CardMedia
                                     className={classes.media}
+                                    id="userImage"
                                     image={value.image_link}
                                     title="Contemplative Reptile"
                                 />
                                 <CardContent>
-                                    <Typography gutterBottom variant="h5" component="h2" autoCapitalize>
+                                    <Typography gutterBottom variant="h5" component="h2" >
                                         {value.firstName} {value.lastName}
                                     </Typography>
 
